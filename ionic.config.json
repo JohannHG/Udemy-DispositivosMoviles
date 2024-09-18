@@ -1,0 +1,7 @@
+{
+  "name": "Udemy",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
