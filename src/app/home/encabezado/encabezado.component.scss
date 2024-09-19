@@ -1,0 +1,75 @@
+#container {
+    text-align: end;
+  
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  #container strong {
+    font-size: 20px;
+    line-height: 26px;
+  }
+  
+  #container p {
+    font-size: 16px;
+    line-height: 22px;
+  
+    color: #8c8c8c;
+  
+    margin: 0;
+  }
+  
+  #container a {
+    text-decoration: none;
+  }
+  
+  /* Estilos para el menú principal */
+  ion-list {
+    --background: #f9f9f9; /* Color de fondo del menú */
+    --border-color: #e0e0e0; /* Color del borde */
+    border-radius: 80px; /* Bordes redondeados */
+    padding: 20px; /* Espacio interno */
+    font-size: 24px; // Cambia el tamaño de la letra del título
+    color: #020202; // Cambia el color de la letra del título
+  }
+  
+  /* Estilos para los elementos del menú */
+  ion-item {
+    font-size: 20px; /* Tamaño de fuente del menú */
+    padding: 12px; /* Espacio interno en el item */
+    min-height: 40px; /* Altura mínima del item */
+  }
+  
+  /* Estilos para el submenú */
+  ion-list ion-item {
+    font-size: 18px; /* Tamaño de fuente del submenú */
+    padding: 10px; /* Espacio interno en el submenú */
+    min-height: 35px; /* Altura mínima del submenú */
+    //background: #000000; /* Color de fondo del submenú */
+    border-radius: 4px; /* Bordes redondeados para submenú */
+    margin: 5px 0; /* Espaciado entre submenús */
+  }
+  
+  /*Barra de busqueda*/
+  ion-searchbar {
+    --background: #ffffff; // Cambia el color de fondo
+    --color: #000; // Cambia el color del texto
+    --placeholder-color: #aaa; // Cambia el color del texto del placeholder
+    font-size: 10px; // Cambia el tamaño de la letra
+    width: 50%; /* Ancho completo */
+    max-width: 400px; /* Ancho máximo */
+    
+  
+    // Estilo para el contenedor de la barra de búsqueda
+    .searchbar-input {
+      font-size: 10px; // Cambia el tamaño de la letra dentro de la barra
+    }
+    
+    // Estilo para el icono de búsqueda
+    .searchbar-search-icon {
+      font-size: 20px; // Cambia el tamaño del icono
+    }
+  }
