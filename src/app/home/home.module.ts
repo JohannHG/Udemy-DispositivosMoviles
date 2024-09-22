@@ -7,6 +7,7 @@ import { HomePage } from './home.page';
 import { HomePageRoutingModule } from './home-routing.module';
 
 import { InicioComponent } from './inicio/inicio.component';
+import { CursosComponent } from './cursos/cursos.component';
 
 
 
@@ -17,6 +18,6 @@ import { InicioComponent } from './inicio/inicio.component';
     IonicModule,
     HomePageRoutingModule
   ],
-  declarations: [HomePage, InicioComponent]
+  declarations: [HomePage, InicioComponent,CursosComponent]
 })
 export class HomePageModule { }
