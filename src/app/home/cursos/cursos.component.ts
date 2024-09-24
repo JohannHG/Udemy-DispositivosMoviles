@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cursos',
@@ -6,11 +7,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./cursos.component.scss'],
 })
 export class CursosComponent {
+
+
+  constructor(private router: Router) { }  // Inyecta el Router en el constructor
+
+
   // Categoría seleccionada
   categorias: string = 'python';
 
   courses = [
     {
+      id: 1,
       titulo: 'Python Practicando: Desde 0 hasta Desarrollador en Python',
       instructor: 'Álvaro Chirou',
       price: 729,
@@ -20,6 +27,7 @@ export class CursosComponent {
       categoria: 'python'
     },
     {
+      id: 2,
       titulo: 'Universidad Python - Cero a Experto',
       instructor: 'Global Mentoring Ing. Ubaldo Acosta',
       price: 149,
@@ -29,6 +37,7 @@ export class CursosComponent {
       categoria: 'python'
     },
     {
+      id: 3,
       titulo: 'Python para no matemáticos',
       instructor: 'Codigo 369, Academia Apps',
       price: 199,
@@ -38,6 +47,7 @@ export class CursosComponent {
       categoria: 'python'
     },
     {
+      id: 4,
       titulo: 'Python 3 plus',
       instructor: 'DataBoosters Academy',
       price: 199,
@@ -47,6 +57,7 @@ export class CursosComponent {
       categoria: 'python'
     },
     {
+      id: 5,
       titulo: 'Curso Maestro de python',
       instructor: 'Héctor Costa Guzmán',
       price: 199,
@@ -56,6 +67,7 @@ export class CursosComponent {
       categoria: 'python'
     },
     {
+      id: 6,
       titulo: 'Programacion con python',
       instructor: 'Jose Ojeda Rojas',
       price: 199,
@@ -65,6 +77,7 @@ export class CursosComponent {
       categoria: 'python'
     },
     {
+      id: 7,
       titulo: 'Universidad Excel',
       instructor: 'Global Mentoring Ing. Ubaldo Acosta',
       price: 199,
@@ -74,6 +87,7 @@ export class CursosComponent {
       categoria: 'excel'
     },
     {
+      id: 8,
       titulo: 'Excel completo',
       instructor: 'Miguel Maraby',
       price: 179,
@@ -83,6 +97,7 @@ export class CursosComponent {
       categoria: 'excel'
     },
     {
+      id: 9,
       titulo: 'Excel y Power BI',
       instructor: 'datdata - Guillermo Perdomo Sosa',
       price: 199,
@@ -92,6 +107,7 @@ export class CursosComponent {
       categoria: 'excel'
     },
     {
+      id: 10,
       titulo: 'Excel',
       instructor: 'Johny Mora',
       price: 179,
@@ -101,6 +117,7 @@ export class CursosComponent {
       categoria: 'excel'
     },
     {
+      id: 11,
       titulo: 'Formulas y funciones en Microsoft Excel',
       instructor: 'DataBoosters Academy, Luis Reyes',
       price: 149,
@@ -110,6 +127,7 @@ export class CursosComponent {
       categoria: 'excel'
     },
     {
+      id: 12,
       titulo: 'Desarrollo Web completo',
       instructor: 'Juan Pabloo De la Torre Valdez',
       price: 179,
@@ -119,6 +137,7 @@ export class CursosComponent {
       categoria: 'desarrolloWeb'
     },
     {
+      id: 13,
       titulo: 'Aprende JavaScript y Jquery',
       instructor: 'Manuel Muñoz',
       price: 349,
@@ -128,6 +147,7 @@ export class CursosComponent {
       categoria: 'desarrolloWeb'
     },
     {
+      id: 14,
       titulo: 'Escuela de Programación y Desarrollo Web',
       instructor: 'Axel Roel ChB',
       price: 199,
@@ -137,6 +157,7 @@ export class CursosComponent {
       categoria: 'desarrolloWeb'
     },
     {
+      id: 15,
       titulo: 'Universidad JavaScript',
       instructor: 'Global Mentoring Ing. Ubaldo Acosta',
       price: 199,
@@ -146,6 +167,7 @@ export class CursosComponent {
       categoria: 'javascript'
     },
     {
+      id: 16,
       titulo: 'JavaScript Moderno',
       instructor: 'Juan Pablo De la Torre Valdez',
       price: 179,
@@ -155,6 +177,7 @@ export class CursosComponent {
       categoria: 'javascript'
     },
     {
+      id: 17,
       titulo: 'Full Stack JavaScript Developer en Español',
       instructor: 'JavaScript Master',
       price: 149,
@@ -165,6 +188,7 @@ export class CursosComponent {
     },
 
     {
+      id: 18,
       titulo: 'Machine Learning de A a la Z',
       instructor: 'SuperDataScience Team',
       price: 179,
@@ -174,6 +198,7 @@ export class CursosComponent {
       categoria: 'cienciasInformacion'
     },
     {
+      id: 19,
       titulo: 'Python',
       instructor: 'DataBoosters Academy',
       price: 149,
@@ -183,6 +208,7 @@ export class CursosComponent {
       categoria: 'cienciasInformacion'
     },
     {
+      id: 20,
       titulo: 'R. Curso completo de R',
       instructor: 'Redait Media',
       price: 179,
@@ -192,6 +218,7 @@ export class CursosComponent {
       categoria: 'cienciasInformacion'
     },
     {
+      id: 21,
       titulo: 'Curso de dibujo cartoon',
       instructor: 'Hector Ulises Gonzalez Ornelas',
       price: 149,
@@ -202,6 +229,7 @@ export class CursosComponent {
     }
     ,
     {
+      id: 22,
       titulo: 'Curso de dibujo',
       instructor: 'Maximiliano León Urgate',
       price: 149,
@@ -212,6 +240,7 @@ export class CursosComponent {
     }
     ,
     {
+      id: 23,
       titulo: 'Experto Dibujo Arquitectoónico',
       instructor: 'Álvaro García',
       price: 149,
@@ -222,8 +251,14 @@ export class CursosComponent {
     }
   ];
 
+
+  // Función para redirigir
+  rutaCurso(courseId: number) {
+    this.router.navigate(['home/cursosInfo', courseId]);  // Redirige al curso con el ID correspondiente
+  }
+
   // Función que devuelve los cursos filtrados según la categoría seleccionada
-  filteredCourses() {
+  cursosPorCategoria() {
     return this.courses.filter(course => course.categoria === this.categorias);
   }
 }
