@@ -10,7 +10,11 @@ const routes: Routes = [
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
+  },  {
+    path: 'centro-comercial',
+    loadChildren: () => import('./centro-comercial/centro-comercial.module').then( m => m.CentroComercialPageModule)
   },
+
 ];
 
 @NgModule({
