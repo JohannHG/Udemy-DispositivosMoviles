@@ -2,35 +2,36 @@
   <ion-toolbar>
     <ion-grid>
       <ion-row>
-        <ion-col size="3" class="footer-logo">
+        <!-- Columna 1  -->
+        <ion-col size="2" class="footer-logo">
           <ion-list>
-            <ion-item><a href="#">Udemy Business</a></ion-item>
-            <ion-item><a href="#">Enseña en Udemy</a></ion-item>
-            <ion-item><a href="#">Consigue la aplicación</a></ion-item>
-            <ion-item><a href="#">¿Quiénes somos?</a></ion-item>
-            <ion-item><a href="#">Ponte en contacto con nosotros</a></ion-item>
+            <ion-item *ngFor="let link of linksColumn1">
+              <a [href]="link.url">{{ link.text }}</a>
+            </ion-item>
           </ion-list>
           <img src="/assets/udemy.png" alt="Udemy Logo" class="footer-image">
         </ion-col>
-        <ion-col size="3">
+
+        <!-- Columna 2  -->
+        <ion-col size="2">
           <ion-list>
-            <ion-item><a href="#">Empleo</a></ion-item>
-            <ion-item><a href="#">Blog</a></ion-item>
-            <ion-item><a href="#">Ayuda y asistencia </a></ion-item>
-            <ion-item><a href="#">Afiliado</a></ion-item>
-            <ion-item><a href="#">Inversores</a></ion-item>
+            <ion-item *ngFor="let link of linksColumn2">
+              <a [href]="link.url">{{ link.text }}</a>
+            </ion-item>
           </ion-list>
         </ion-col>
-        <ion-col size="3">
+
+        <!-- Columna 3 -->
+        <ion-col size="2">
           <ion-list>
-            <ion-item><a href="#">Condiciones</a></ion-item>
-            <ion-item><a href="#">Politica de privacidad</a></ion-item>
-            <ion-item><a href="#">Configuracion de cookies</a></ion-item>
-            <ion-item><a href="#">Mapa del sitio</a></ion-item>
-            <ion-item><a href="#">Declaracion de accesibilidad</a></ion-item>
+            <ion-item *ngFor="let link of linksColumn3">
+              <a [href]="link.url">{{ link.text }}</a>
+            </ion-item>
           </ion-list>
         </ion-col>
       </ion-row>
+
+      <!-- Derechos de autor -->
       <ion-row class="footer-copyright">
         <ion-col size="12">
           <p class="copyright-text">© 2024 Udemy, Inc.</p>
@@ -39,3 +40,4 @@
     </ion-grid>
   </ion-toolbar>
 </ion-footer>
+
