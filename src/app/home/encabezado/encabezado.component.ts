@@ -12,6 +12,14 @@ export class EncabezadoComponent{
 
   constructor() {}
 
+  abrirCarrito() {
+    console.log('Carrito abierto');
+  }
+
+  seleccionarIdioma() {
+    console.log('Seleccionar idioma');
+  }
+
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
   }

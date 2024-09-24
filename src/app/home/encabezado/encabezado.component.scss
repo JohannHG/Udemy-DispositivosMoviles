@@ -26,6 +26,17 @@
     text-decoration: none;
   }
   
+  ion-header {
+    --background: #ffffff; /* Color de fondo del encabezado */
+    color: rgb(7, 7, 7); /* Color del texto del encabezado */
+  }
+  
+  ion-toolbar {
+    --background: #fdfdff; /* Color de fondo del toolbar */
+    color: rgb(7, 7, 7); /* Color del texto del toolbar */
+  }
+
+
   /* Estilos para el menú principal */
   ion-list {
     --background: #f9f9f9; /* Color de fondo del menú */
@@ -43,33 +54,105 @@
     min-height: 40px; /* Altura mínima del item */
   }
   
-  /* Estilos para el submenú */
-  ion-list ion-item {
-    font-size: 18px; /* Tamaño de fuente del submenú */
-    padding: 10px; /* Espacio interno en el submenú */
-    min-height: 35px; /* Altura mínima del submenú */
-    //background: #000000; /* Color de fondo del submenú */
-    border-radius: 4px; /* Bordes redondeados para submenú */
-    margin: 5px 0; /* Espaciado entre submenús */
+  /* Estilos independientes del submenu*/
+  .submenu-item {
+    font-size: 18px; /* Tamaño de fuente */
+    padding: 10px 15px; /* Espaciado interno */
+    background: #f8f3f3; /* Color de fondo */
+    border-radius: 4px; /* Bordes redondeados */
+    margin: 5px 0; /* Espaciado entre ítems */
+    transition: background 0.3s ease; /* Transición suave para el fondo */
+  
+    /* Cambios de estilo al pasar el mouse */
+    &:hover {
+      background: rgba(255, 255, 255, 0.1); /* Fondo al pasar el ratón */
+    }
   }
+  
+
   
   /*Barra de busqueda*/
-  ion-searchbar {
-    --background: #ffffff; // Cambia el color de fondo
-    --color: #000; // Cambia el color del texto
-    --placeholder-color: #aaa; // Cambia el color del texto del placeholder
-    font-size: 10px; // Cambia el tamaño de la letra
-    width: 50%; /* Ancho completo */
-    max-width: 400px; /* Ancho máximo */
-    
-  
-    // Estilo para el contenedor de la barra de búsqueda
-    .searchbar-input {
-      font-size: 10px; // Cambia el tamaño de la letra dentro de la barra
-    }
-    
-    // Estilo para el icono de búsqueda
-    .searchbar-search-icon {
-      font-size: 20px; // Cambia el tamaño del icono
-    }
+  .custom-searchbar {
+    --background: #f7f7f7; /* Fondo del searchbar */
+    --icon-color: #757575; /* Color del icono de búsqueda */
+    --color: #000; /* Color del texto */
+    --placeholder-color: #757575; /* Color del texto del placeholder */
+    --border-color: #0c0a0a; /* Variable personalizada para el color del borde */
+    border-radius: 10px; /* Redondez de los bordes */
+    padding: 0; /* Elimina padding adicional */
+    border: 1px solid var(--border-color); /* Aplica la variable del color del borde */
   }
+  .custom-searchbar .searchbar-input-container {
+    border-radius: 10px; /* Ajusta la redondez del contenedor interno */
+    overflow: hidden; /* Mantiene el contenido dentro del borde redondeado */
+  }
+  .custom-searchbar .searchbar-input {
+    border-radius: 10px; /* Ajusta la redondez del input */
+  }
+  .custom-searchbar .searchbar-clear-icon,
+  .custom-searchbar .searchbar-search-icon {
+    margin: 0 8px; /* Ajusta el espaciado de los íconos */
+  }
+  .custom-searchbar::part(container) {
+    border-radius: 10px; /* Ajusta el borde del contenedor principal */
+    border: 1px solid var(--border-color); /* Usa la variable del color del borde */
+  }
+  
+ /* Estilos para botones */
+ ion-button {
+  --background: #0e0e0f; /* Color de fondo */
+  --color: rgb(247, 243, 243); /* Color del texto */
+  --border-radius: 12px; /* Bordes redondeados */
+  --padding: 10px 20px; /* Espaciado interno */
+  text-align: center; /* Centra el texto */
+  text-transform: none; /* Evita que el texto esté en mayúsculas */
+}
+
+/* Estilos para los tres botones específicos */
+ion-button.custom-border-button {
+  --background: #ffffff; /* Color de fondo */
+  --color: rgb(17, 17, 17); /* Color del texto */
+  --border-width: 2px; /* Grosor del borde */
+  --border-style: solid; /* Estilo del borde */
+  --border-color: #0a0a0a; /* Color del borde */
+  --border-radius: 0px; /* Bordes redondeados */
+  --padding: 10px 20px; /* Espaciado interno */
+  text-align: center; /* Centra el texto */
+  text-transform: none; /* Evita que el texto esté en mayúsculas */
+}
+
+/* Estilos para el botón con fondo específico */
+ion-button.custom-background-button {
+  --background: #0a0a0a; /* Color de fondo específico */
+  --color: rgb(247, 243, 243); /* Color del texto */
+  --border-radius: 0px; /* Bordes redondeados */
+  --padding: 10px 20px; /* Espaciado interno */
+  text-align: center; /* Centra el texto */
+  text-transform: none; /* Evita que el texto esté en mayúsculas */
+}
+
+  /* Estilos para los botones que activan el popover */
+  #hover-trigger,
+  #second-hover-trigger {
+    --background: #fbfcfd; /* Color de fondo */
+    --color: rgb(15, 15, 15); /* Color del texto */
+    --border-radius: 5px; /* Bordes redondeados */
+    padding: 10px 15px; /* Espaciado interno */
+    font-size: 15px; /* Tamaño de fuente */
+    transition: background 0.3s; /* Transición suave */
+  }
+
+  /* Estilos para los botones dentro del popover */
+ion-popover ion-button {
+  --background: #4f4f50; /* Color de fondo de los botones dentro del popover */
+  --color: white; /* Color del texto de los botones dentro del popover */
+  --border-radius: 5px; /* Bordes redondeados de los botones */
+  margin: 5px 0; /* Espaciado entre botones */
+  padding: 10px; /* Espaciado interno de los botones */
+  font-size: 16px; /* Tamaño de fuente de los botones */
+}
+
+.active {
+  transform: scale(0.95);
+  transition: transform 0.1s ease-in-out;
+}
