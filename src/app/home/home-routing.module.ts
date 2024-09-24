@@ -11,6 +11,11 @@ const routes: Routes = [
     component: CentroComercialPage,
   },
   {
+    path:'',
+    redirectTo: 'CentroComercialPageRoutingModule',
+    pathMatch: 'full'
+  },
+  {
     path: 'cursosInfo/:id',
     component: CursosInfoComponent
   }
