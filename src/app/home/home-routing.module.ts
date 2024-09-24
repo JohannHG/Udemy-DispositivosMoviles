@@ -2,18 +2,16 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomePage } from './home.page';
 import { CursosInfoComponent } from './cursos-info/cursos-info.component';
-import { CentroComercialPage } from '../centro-comercial/centro-comercial.page';
 
 const routes: Routes = [
   {
     path: '',
-    // component: HomePage,
-    component: CentroComercialPage,
+    redirectTo: 'centrocomercial',
+    pathMatch: 'full'
   },
   {
-    path:'',
-    redirectTo: 'CentroComercialPageRoutingModule',
-    pathMatch: 'full'
+    path: 'centrocomercial',
+    loadChildren: () => import('../centro-comercial/centro-comercial.module').then(m => m.CentroComercialPageModule)
   },
   {
     path: 'cursosInfo/:id',
