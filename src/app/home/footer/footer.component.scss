@@ -1,0 +1,49 @@
+.footer-logo {
+    position: relative;
+  }
+  
+  .footer-image {
+    position: absolute;
+    bottom: -50px; /* Ajusta este valor según la posición deseada */
+    left: 0;
+    width: 100px; /* Ajusta el tamaño según lo necesario */
+    height: auto;
+  }
+  
+  ion-footer {
+    background-color: #333; /* Fondo oscuro */
+    color: #fff; /* Texto claro */
+    padding: 20px 0;
+  }
+  
+  h3 {
+    color: #fff; /* Color del título de cada sección */
+    font-size: 14px; /* Tamaño de fuente reducido */
+    margin-bottom: 1px; /* Menor margen inferior */
+  }
+  
+  ion-item {
+    --border-width: 0; /* Elimina las líneas (bordes) debajo de los ion-item */
+    padding: 0; /* Elimina el padding adicional para que los enlaces queden más juntos */
+  }
+  
+  ion-item a {
+    text-decoration: none; /* Elimina la línea debajo del enlace (subrayado) */
+    color: #fff; /* Enlaces completamente en blanco */
+    font-size: 12px; /* Tamaño de fuente reducido */
+  }
+  
+  ion-item a:hover {
+    color: #ccc; /* Efecto hover para los enlaces en gris claro */
+  }
+  
+  .footer-copyright {
+    justify-content: flex-end; /* Alinea el texto a la derecha */
+  }
+  
+  .copyright-text {
+    color: #fff; /* Texto de derechos de autor en blanco */
+    font-size: 12px; /* Tamaño de fuente reducido */
+    text-align: right;
+    margin-right: 10px; /* Margen derecho opcional */
+  }

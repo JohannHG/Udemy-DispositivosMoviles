@@ -1,0 +1,66 @@
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+
+
+}
+
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+
+    font-size: 5px;
+    padding: 0px;
+}
+
+
+
+.nav-button.prev {
+    left: 1px;
+}
+
+.nav-button.next {
+    right: 1px;
+}
+
+ion-icon {
+    font-size: 24px;
+    color: white;
+}
+
+.full-width-image {
+    width: 100vw;
+    /* 100% del ancho de la ventana */
+    overflow: hidden;
+
+}
+
+.full-width-image img {
+    width: 100%;
+    height: auto;
+    /* Mantiene la relación de aspecto */
+    display: block;
+    /* Elimina espacios blancos alrededor de la imagen */
+
+}
