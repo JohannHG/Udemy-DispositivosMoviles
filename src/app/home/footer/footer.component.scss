@@ -1,51 +1,41 @@
-.footer-logo {
-  position: relative;
+ion-footer {
+  background-color: #3f3c3c;
+  /* Dark background */
+  color: white;
+  /* White text */
+}
+
+ion-footer a {
+  color: #ccc;
+  /* Light grey for links */
+  text-decoration: none;
+  /* No underline */
+}
+
+ion-footer a:hover {
+  color: #fff;
+  /* White on hover */
 }
 
 .footer-image {
-  max-width: 100px; /* Tamaño máximo del logo */
-  height: auto;
   margin-top: 10px;
+  width: 100px;
+  /* Adjust size as needed */
 }
 
-ion-footer {
-  background-color: #333; /* Fondo oscuro */
-  color: #fff; /* Texto claro */
-  padding: 10px 0;
-}
-
-h3 {
-  color: #fff;
-  font-size: 14px; /* Tamaño de fuente reducido */
-  margin-bottom: 1px;
-}
-
-ion-item {
-  --border-width: 0; /* Elimina los bordes en los items */
-}
-
-ion-item a {
-  text-decoration: none;
-  color: #fff;
-}
-
-ion-item a:hover {
-  color: #ccc; /* Efecto hover para los enlaces en gris claro */
+.footer-logo {
+  padding-bottom: 10px;
 }
 
 .footer-copyright {
-  justify-content: center; /* Centra el texto de derechos de autor */
+  text-align: center;
+  border-top: 1px solid #444;
+  /* Border between content and copyright */
+  padding-top: 10px;
+  margin-top: 20px;
 }
 
-.copyright-text {
-  color: #fff;
-  font-size: 12px; /* Tamaño de fuente reducido */
-  text-align: right;
-  margin-right: 10px; /* Margen derecho opcional */
-}
-
-@media (max-width: 576px) {
-  .footer-image {
-    max-width: 80px; /* Ajusta el tamaño del logo para pantallas más pequeñas */
-  }
+ion-toolbar {
+  --ion-background-color: #1c1c1c;
+  /* Ensuring the toolbar inherits the dark background */
 }
