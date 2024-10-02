@@ -72,7 +72,7 @@ export class CursosComponent {
       instructor: 'Jose Ojeda Rojas',
       price: 199,
       rating: 4.4,
-      image: 'assets/cursos/python/p5.PNG',
+      image: 'assets/cursos/python/p6.PNG',
       description: 'De cero a programador.',
       categoria: 'python'
     },

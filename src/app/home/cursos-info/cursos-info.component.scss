@@ -1,0 +1,62 @@
+/* Centrar la imagen dentro del ion-card-content */
+ion-card-content img {
+    display: block;
+    margin: 0 auto;
+    /* Esto centra la imagen horizontalmente */
+    max-width: 100%;
+    /* Asegúrate de que la imagen no se salga de su contenedor */
+    height: auto;
+    /* Mantener la proporción de la imagen */
+}
+
+/* Otras reglas de estilo existentes */
+ion-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+ion-card-title {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #ccc;
+}
+
+ion-card-subtitle {
+    font-size: 1.1rem;
+    color: #ccc;
+}
+
+ion-card {
+    background-color: #1c1c1c;
+    color: white;
+}
+
+ion-list-header {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.descuento {
+    text-decoration: line-through;
+    color: #ccc;
+}
+
+h2 {
+    color: #f39c12;
+}
+
+ion-button {
+    margin-top: 10px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    padding-left: 1.2rem;
+    margin: 5px 0;
+    font-size: 1rem;
+}

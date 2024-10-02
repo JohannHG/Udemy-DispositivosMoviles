@@ -9,6 +9,7 @@ import { InicioComponent } from './inicio/inicio.component';
 import { CursosComponent } from './cursos/cursos.component';
 import { EncabezadoComponent } from './encabezado/encabezado.component';
 import { FooterComponent } from './footer/footer.component';
+import { CursosInfoComponent } from './cursos-info/cursos-info.component';
 
 
 @NgModule({
@@ -18,6 +19,6 @@ import { FooterComponent } from './footer/footer.component';
     IonicModule,
     HomePageRoutingModule
   ],
-  declarations: [HomePage,InicioComponent,CursosComponent,EncabezadoComponent,FooterComponent]
+  declarations: [HomePage, InicioComponent, CursosComponent, EncabezadoComponent, FooterComponent, CursosInfoComponent]
 })
-export class HomePageModule {}
+export class HomePageModule { }

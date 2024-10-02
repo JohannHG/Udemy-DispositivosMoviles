@@ -1,16 +1,18 @@
-import { Component} from '@angular/core';
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-encabezado',
   templateUrl: './encabezado.component.html',
   styleUrls: ['./encabezado.component.scss'],
 })
-export class EncabezadoComponent{
-  isMenuOpen = false; // Controla si el menú está abierto
-  private openSubmenus: { [key: string]: boolean } = {}; // Almacena los submenús abiertos
-  searchQuery: string = ''; // Almacena la consulta de búsqueda
+export class EncabezadoComponent {
+  isMenuOpen = false;
+  private openSubmenus: { [key: string]: boolean } = {};
+  searchQuery: string = '';
 
-  constructor() {}
+  // Inyectamos el Router en el constructor
+  constructor(private router: Router) { }
 
   abrirCarrito() {
     console.log('Carrito abierto');
@@ -51,4 +53,9 @@ export class EncabezadoComponent{
   onSearch(event: any) {
     console.log('Search query:', this.searchQuery);
   }
-} 
+
+  // Nuevo método para redirigir al inicio
+  goToHome() {
+    this.router.navigate(['/']); // Redirige a la ruta raíz (inicio)
+  }
+}
